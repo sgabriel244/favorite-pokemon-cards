@@ -1,68 +1,116 @@
-/* CSS for the Lightbox Effect */
-.lightbox-target {
-  position: fixed;
-  top: -100%;
-  width: 100%;
-  background: rgba(0,0,0,.7);
-  opacity: 0;
-  z-index: 100;
-  transition: transform 1.3s ease-in-out;
-  overflow: hidden;
-}
-
-.lightbox-target:target {
-  opacity: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.lightbox-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.lightbox-content img {
-  max-width: max-content;
-  max-height: max-content;
-  border-radius: 5px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.5);
-  transition: transform 1.3s ease-in-out;
-}
-
-.lightbox-content img:hover {
-  transform: scale(2.1);
-}
-
-.lightbox-close {
-  display: block;
-  width:50px;
-  height:50px;
-  box-sizing: border-box;
-  background: white;
-  color: black;
-  text-decoration: none;
-  position: absolute;
-  top: 35px;
-  right: 25px;
-  font-size: 2em;
+.h1, h2 {
   text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
 }
 
+.original-p {
+  font-size: 20px;
+  text-align: center;
+}
+/* CSS for the Lightbox Effect */
+/* ======================= ESTILOS DO LIGHTBOX ======================= */
+
+/* Defines the style of the lightbox container. */
+.pokemon-card-target {
+    position: fixed; /* Fixed position relative to the browser window. */
+    top: -100%; /* Starts off-screen at the top. */
+    width: 100%; /* Occupies the full width. */
+    background: rgba(0, 0, 0, .7); /* Semi-transparent black background. */
+    opacity: 0; /* Starts fully transparent. */
+    z-index: 100; /* Stays in front of other elements. */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity. */
+    overflow: hidden; /* Hides any content that overflows. */
+}
+
+/* The "magic" of the lightbox happens here with the :target pseudo-class. */
+/* This rule is applied WHEN the element is the "target" of a link (e.g., #card-lightbox-1). */
+.pokemon-card-target:target {
+    opacity: 1; /* Makes the lightbox visible. */
+    top: 0; /* Moves it to the visible position at the top of the screen. */
+    bottom: 0;
+    left: 0;
+    right: 0; /* Occupies the entire screen. */
+}
+
+/* Container for the content inside the lightbox (the large image). */
+.pokemon-card-content {
+    display: flex; /* Uses flexbox to facilitate centering. */
+    justify-content: center; /* Centers horizontally. */
+    align-items: center;  /* Centers vertically. */
+    height: 100%; /* Occupies the full height of the lightbox. */
+}
+
+/* Style of the large image inside the lightbox. */
+.pokemon-card-content img {
+    max-width: 90%; /* Ensures the image does not exceed the screen width. */
+    max-height: 90%; /* Ensures the image does not exceed the screen height. */
+    border-radius: 5px; //* Slightly rounded borders. */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .5); /* Shadow to give depth. */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+}
+
+/* This rule applies the zoom to the image WHEN the lightbox is active (:target). */
+.pokemon-card-target:target .pokemon-card-content img {
+    transform: scale(2.1); /* Increases the image size by 2.1 times. */
+}
+
+/* Style of the close button (the "X"). */
+.lightbox-close {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: black;
+    text-decoration: none; /* Removes the link underline. */
+    position: absolute; /* Absolute position relative to the lightbox. */
+    top: 35px; /* Size of the "X". */
+    right: 25px;
+    font-size: 2em; 
+    text-align: center; /* Centers the "X" vertically. */
+    line-height: 50px; 
+    border-radius: 50%; /* Makes the button round. */
+}
+
+
+/* ======================= CARD THUMBNAIL STYLES ======================= */
+
+/* Style of the card thumbnail images. */
 .pokemon-card img {
-  max-width: 150px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
+    max-width: 120px; /* Maximum width of the thumbnail. */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow. */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for the hover effect. */
 }
 
+/* Effect when hovering over the thumbnail. */
 .pokemon-card:hover img {
-  transform: scale(1.15);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    transform: scale(1.15); /* Slightly increases the size. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increases the shadow to give a "lifting" effect. */
 }
 
+/* Container that aligns the cards side by side. */
+.cards-container {
+    display: flex; /* Activates the flexbox layout. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 20px; /* Space between the cards. */
+}
+
+/* Style for each individual card (image + text). */
+.card {
+    text-align: center; /* Centers the text below the image. */
+    padding-right: 20px; /* Right padding for the separator line. */
+    border-right: thick solid #000000; /* Thick, solid black separator line. */
+}
+
+/* Removes the separator line from the last card to avoid an extra line. */
+.card:last-child {
+    border-right: none; /* Removes the border. */
+    padding-right: 0; /* Removes the extra padding. */
+}
+
+/* Style of the paragraph text below each card. */
+.card p {
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
