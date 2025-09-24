@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>My favorite Pokémon TCG cards</title>
     
 </head>
@@ -26,7 +26,7 @@
     
 
     <!-- This is the main container that groups all the cards. CSS will use the 'cards-container' class to align them. -->
-    <div class="cards-container">
+    <div class="cards-container"> <!-- Start of cards container -->
 
         <!-- Each individual card (image + text) is wrapped in a 'div' with the 'card' class. -->
         <div class="card">
@@ -37,21 +37,125 @@
                 <img src="pokemon-cards/moltres-rare-base.png" alt="Moltres Pokémon card thumbnail">
                 <!-- The image itself, which acts as a thumbnail. -->
             </a>
-            <strong>
-                <p>Moltres</p>
-            </strong> <!-- Descriptive text for the card. -->
+
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Moltres <br>
+                <strong>Artist: </strong> Mitsuhiro Arita <br>
+                <strong>Rarity: </strong> Rare <br>
+                <strong>Set: </strong> Base Set - Fossil<br>
+                <strong>Card Number: </strong> 27/62 <br>
+                <strong>Release year: </strong> 1999
+            </p> 
+
         </div>
 
         <div class="card">
             <!-- Card 2: Dark Dragonair -->
             <a href="#card-lightbox-2" class="pokemon-card">
-                <img src="pokemon-cards/dark-dragonair-unc-base.png" alt="Dark Dragonair">
+                <img src="pokemon-cards/dark-dragonair-unc-base.png" alt="Dark Dragonair Pokémon card thumbnail">
             </a>
-            <strong>
-                <p>Dark Dragonair</p>
-            </strong>
+            
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Dark Dragonair <br>
+                <strong>Artist: </strong> Kagemaru Himen0 <br>
+                <strong>Rarity: </strong> Uncommon <br>
+                <strong>Set: </strong> Team Rocket <br>
+                <strong>Card Number: </strong> 33/82 <br>
+                <strong>Release year: </strong> 1999-2000
+            </p>
+
         </div>
-    </div>
+
+        <div class="card">
+            <!-- Card 3: Blaine's Tauros -->
+                <!-- The <a> link wraps the image. The 'href="#card-lightbox-1"' is the key to the lightbox effect.
+                    It "targets" the element with the id="card-lightbox-1". -->
+            <a href="#card-lightbox-3" class="pokemon-card">
+                <img src="pokemon-cards/blaine-tauros-com-base.png" alt="Blaine's Tauros Pokémon card thumbnail">
+            </a>
+                 
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Blaine's Tauros <br>
+                <strong>Artist: </strong> Ken Sugimori <br>
+                <strong>Rarity: </strong> Common <br>
+                <strong>Set: </strong> Gym Heroes <br>
+                <strong>Card Number: </strong> 64/132 <br>
+                <strong>Release year: </strong> 1999-2000
+            </p>
+
+        </div>
+
+        <div class="card">
+            <!-- Card 4: Sabrina's Gengar-->
+            <a href="#card-lightbox-4" class="pokemon-card">
+                <img src="pokemon-cards/sabrina-gengar-rare-base.png" alt="Sabrina's Gengar Pokémon card thumbnail">
+            </a>
+            
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Sabrina's Gengar <br>
+                <strong>Artist: </strong> Ken Sugimori <br>
+                <strong>Rarity: </strong> Rare <br>
+                <strong>Set: </strong> Gym Heroes <br>
+                <strong>Card Number: </strong> 14/132 <br>
+                <strong>Release year: </strong> 1999-2000
+            </p>
+
+        </div>
+
+        <div class="card">
+            <!-- Card 5: Blaine's Growlithe -->
+            <a href="#card-lightbox-5" class="pokemon-card">
+                <img src="pokemon-cards/blaine-growlithe-com-base.png" alt="Blaine's Growlithe Pokémon card thumbnail">
+            </a>
+            
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Blaine's Growlithe <br>
+                <strong>Artist: </strong> Ken Sugimori <br>
+                <strong>Rarity: </strong> Common <br>
+                <strong>Set: </strong> Gym Heroes <br>
+                <strong>Card Number: </strong> 62/132 <br>
+                <strong>Release year: </strong> 1999-2000
+            </p>
+
+        </div>
+
+        <div class="card">
+            <!-- Card 6: Lt. Surge's Pikachu -->
+            <a href="#card-lightbox-6" class="pokemon-card">
+                <img src="pokemon-cards/lt.surge-pikachu-com-base.png" alt="Lt. Surge's Pikachu Pokémon card thumbnail">
+            </a>
+            
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Lt. Surge's Pikachu <br>
+                <strong>Artist: </strong> Atsuko Nishidaa <br>
+                <strong>Rarity: </strong> Common <br>
+                <strong>Set: </strong> Gym Heroes <br>
+                <strong>Card Number: </strong> 84/132 <br>
+                <strong>Release year: </strong> 1999-2000
+            </p>
+
+        </div>
+        
+        <div class="card">
+            <!-- Card 7: Heracross -->
+            <a href="#card-lightbox-7" class="pokemon-card">
+                <img src="pokemon-cards/heracross-rare-base.png" alt="Heracross Pokémon card thumbnail">
+            </a>
+            
+            <p class="desc-card-p"> 
+                <strong>Name: </strong> Heracross <br>
+                <strong>Artist: </strong> Ken Sugimori <br>
+                <strong>Rarity: </strong> Rare <br>
+                <strong>Set: </strong> Neo Discovery <br>
+                <strong>Card Number: </strong> 6/111 <br>
+                <strong>Release year: </strong> 2001
+            </p>
+
+
+        </div>
+
+    </div> <!-- End of cards container -->
+    
 
     <!-- ======================= LIGHTBOXES ======================= -->
     <!-- The lightboxes are hidden until a link points to their 'id'. -->
@@ -64,14 +168,64 @@
         </div>
         <!-- The close link. The 'href="#"' removes the target from the URL, causing the lightbox to disappear. -->
         <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-2" class="lightbox-nav lightbox-next">›</a>
     </div>
 
     <!-- Lightbox for Dark Dragonair -->
     <div class="pokemon-card-target" id="card-lightbox-2">
         <div class="pokemon-card-content">
             <img src="pokemon-cards/dark-dragonair-unc-base.png" alt="Dark Dragonair large">
+    </div>
+        <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-1" class="lightbox-nav lightbox-prev">‹</a>
+        <a href="#card-lightbox-3" class="lightbox-nav lightbox-next">›</a>
+    </div>
+
+    <div class="pokemon-card-target" id="card-lightbox-3">
+        <div class="pokemon-card-content">
+            <img src="pokemon-cards/blaine-tauros-com-base.png" alt="Blaine's Tauros large">
         </div>
         <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-2" class="lightbox-nav lightbox-prev">‹</a>
+        <a href="#card-lightbox-4" class="lightbox-nav lightbox-next">›</a>
+    </div>
+
+    <!-- Lightbox for Sabrina's Gengar-->
+    <div class="pokemon-card-target" id="card-lightbox-4">
+        <div class="pokemon-card-content">
+            <img src="pokemon-cards/sabrina-gengar-rare-base.png" alt="Sabrina's Gengar large">
+        </div>
+        <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-3" class="lightbox-nav lightbox-prev">‹</a>
+        <a href="#card-lightbox-5" class="lightbox-nav lightbox-next">›</a>
+    </div>
+
+    <div class="pokemon-card-target" id="card-lightbox-5">
+        <div class="pokemon-card-content">
+            <img src="pokemon-cards/blaine-growlithe-com-base.png" alt="Blaine's Growlithe large">
+        </div>
+        <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-4" class="lightbox-nav lightbox-prev">‹</a>
+        <a href="#card-lightbox-6" class="lightbox-nav lightbox-next">›</a>
+    </div>
+
+    <div class="pokemon-card-target" id="card-lightbox-6">
+        <div class="pokemon-card-content">
+            <img src="pokemon-cards/lt.surge-pikachu-com-base.png" alt="Lt. Surge's Pikachu large">
+        </div>
+        <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-5" class="lightbox-nav lightbox-prev">‹</a>
+        <a href="#card-lightbox-7" class="lightbox-nav lightbox-next">›</a>
+    </div>
+
+    <div class="pokemon-card-target" id="card-lightbox-7">
+        <div class="pokemon-card-content">
+            <img src="pokemon-cards/heracross-rare-base.png" alt="Heracross large">
+        </div>
+        <a href="#" class="lightbox-close">×</a>
+        <a href="#card-lightbox-6" class="lightbox-nav lightbox-prev">‹</a>
+
+
     </div>
 
 </body>
