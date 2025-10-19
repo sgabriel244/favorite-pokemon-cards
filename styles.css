@@ -2,16 +2,129 @@
   text-align: center;
 }
 
+.logo {
+    display: flex; /* Uses flexbox for layout. */
+    flex-direction: column; /* Stacks items vertically. */
+    justify-content: space-between; /* Evenly spaces items vertically. */
+    align-items: center; /* Centers items horizontally. */
+    text-align: center; /* Centers the text below the logo. */
+    padding-bottom: 5px; /* Bottom padding for spacing. */
+    padding-right: 10px; /* Right padding for the separator line. */
+    padding-top: 10px; /* Top padding for spacing. */
+    border-bottom: medium solid #000000; /* Medium, solid black separator line. */
+    border-right: medium solid #000000; /* Medium, solid black separator line. */
+    border-top: medium solid #000000; /* Medium, solid black separator line. */
+    border-left: medium solid #000000; /* Medium, solid black separator line. */
+    margin-bottom: 10px; /* Space below each logo. */
+}
+
+.logo-container {
+    display: grid; /* Uses flexbox for layout. */
+    justify-content: baseline; /* Aligns logos to the start of the container. */
+    gap: 5px; /* Space between the logos. */
+    
+    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
+    
+    
+}
+
+.logo-name {
+    font-family: cursive;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 14px;
+    padding-bottom: 5px;
+}
+
+.set-symbol {
+    width: 20px;
+}
+
+.set-logo {
+    max-width: 200px;
+    justify-content: center;
+
+}
+
 .original-p {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
-.desc-card-p {
+.desc-card-p{
     margin: 14px;
     padding-bottom: 5px;
-    color: orange;
+    font-weight: bold;
+    font-size: 15px;
 }
+
+/* ======================= CARD THUMBNAIL STYLES ======================= */
+
+/* Style for each individual card (image + text). */
+.card {
+    text-align: center; /* Centers the text below the image. */
+    padding-bottom: 10px; /* Bottom padding for spacing. */
+    padding-right: 15px; /* Right padding for the separator line. */
+    padding-top: 20px; /* Top padding for spacing. */
+    border-bottom: medium solid #000000; /* Medium, solid black separator line. */
+    border-right: medium solid #000000; /* Medium, solid black separator line. */
+    border-top: medium solid #000000; /* Medium, solid black separator line. */
+    border-left: medium solid #000000; /* Medium, solid black separator line. */
+    margin-bottom: 10px; /* Space below each card. */
+}
+
+/* Container that aligns the cards side by side. */
+.cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 0; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+/* Style of the card thumbnail images. */
+.pokemon-card img {
+    max-width: 120px; /* Maximum width of the thumbnail. */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow. */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition for the hover effect. */
+}
+
+/* Effect when hovering over the thumbnail. */
+.pokemon-card:hover img {
+    transform: scale(1.15); /* Slightly increases the size. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increases the shadow to give a "lifting" effect. */
+}
+
+
+ @media (max-width: 950px) { 
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Removes the separator line from the last card to avoid an extra line. */
+.card:last-child {
+    border-right: none; /* Removes the border. */
+    padding-right: 0; /* Removes the extra padding. */
+}
+
+/* Style of the paragraph text below each card. */
+.card p {
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
 /* CSS for the Lightbox Effect */
 /* ======================= LIGHTBOX STYLES ======================= */
 
@@ -61,86 +174,6 @@
     transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
 }
 
-.lightbox-close { /* Style of the close button (the "X"). */
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: white;
-    color: black;
-    text-decoration: none; /* Removes the link underline. */
-    position: absolute; /* Absolute position relative to the lightbox. */
-    top: 35px; /* Size of the "X". */
-    right: 400px;
-    font-size: 2em; 
-    text-align: center; /* Centers the "X" vertically. */
-    line-height: 50px; 
-    border-radius: 50%; /* Makes the button round. */
-}
-
-/* ======================= CARD THUMBNAIL STYLES ======================= */
-
-/* Style of the card thumbnail images. */
-.pokemon-card img {
-    max-width: 120px; /* Maximum width of the thumbnail. */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow. */
-    transition: transform 0.2s, box-shadow 0.2s; /* Transition for the hover effect. */
-}
-
-/* Effect when hovering over the thumbnail. */
-.pokemon-card:hover img {
-    transform: scale(1.15); /* Slightly increases the size. */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increases the shadow to give a "lifting" effect. */
-}
-
-/* Container that aligns the cards side by side. */
-.cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 0; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
-}
-
-/* Style for each individual card (image + text). */
-.card {
-    text-align: center; /* Centers the text below the image. */
-    padding-bottom: 10px; /* Bottom padding for spacing. */
-    padding-right: 15px; /* Right padding for the separator line. */
-    padding-top: 20px; /* Top padding for spacing. */
-    border-bottom: medium solid #000000; /* Medium, solid black separator line. */
-    border-right: medium solid #000000; /* Medium, solid black separator line. */
-    border-top: medium solid #000000; /* Medium, solid black separator line. */
-    border-left: medium solid #000000; /* Medium, solid black separator line. */
-    margin-bottom: 10px; /* Space below each card. */
-}
-
- @media (max-width: 950px) { 
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 650px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Removes the separator line from the last card to avoid an extra line. */
-.card:last-child {
-    border-right: none; /* Removes the border. */
-    padding-right: 0; /* Removes the extra padding. */
-}
-
-/* Style of the paragraph text below each card. */
-.card p {
-    font-family: 'Arial', sans-serif;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #333;
-}
-
 
 /* ======================= ESTILOS DAS SETAS DE NAVEGAÇÃO ======================= */
 
@@ -166,10 +199,10 @@
 .lightbox-prev {
     left: 400px;
 
-    @media screen and (max-width: 800px) { 
-        display: flex; /* Esconde as setas em telas pequenas */ 
-        left: 10px;
-        
+    @media screen and (max-width: 700px) { 
+        display: flex;
+        left: 30px;
+        top: 50px;
     }
 }
 
@@ -177,9 +210,33 @@
 .lightbox-next {
     right: 400px;
 
-    @media screen and (max-width: 800px) { 
-        display: flex; /* Esconde as setas em telas pequenas */ 
-        right: 10px;
+    @media screen and (max-width: 700px) { 
+        display: flex;
+        right: 30px;
+        top: 50px;
         
+    }
+}
+
+.lightbox-close { /* Style of the close button (the "X"). */
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: black;
+    text-decoration: none; /* Removes the link underline. */
+    position: absolute; /* Absolute position relative to the lightbox. */
+    top: 35px; /* Size of the "X". */
+    right: 400px;
+    font-size: 3em; 
+    text-align: center; /* Centers the "X" vertically. */
+    line-height: 50px; 
+    border-radius: 50%; /* Makes the button round. */
+
+    @media screen and (max-width: 700px) { 
+        display: flex;
+        left: 165px;
+        position: absolute;
+        font-size: 5em;
     }
 }
