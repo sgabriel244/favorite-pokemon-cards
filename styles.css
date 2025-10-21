@@ -1,6 +1,54 @@
-.h1, h2 {
-  text-align: center;
+@font-face{
+    font-family: 'PokemonHollow';
+    src: url(../favorite-pokemon-cards/PokemonHollow.ttf);
 }
+
+@font-face {
+    font-family: 'PokemonSolid';
+    src: url(../favorite-pokemon-cards/PokemonSolid.ttf);
+}
+
+.h1 {
+  text-align: center;
+  font-family: 'PokemonHollow';
+  color: rgb(57,85,158);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+.main-logo {
+    display: grid;
+    margin-left: auto; /* Centers the image horizontally. */
+    margin-right: auto; /* Centers the image horizontally. */
+    max-width: 18rem; /* Sets a maximum width for the logo. */
+    height: auto; /* Maintains the aspect ratio of the image. */
+    margin-top: auto; /* Adds some space above the logo. */
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+  .main-logo {
+    max-width: 150px; /* Adjusts the maximum width for smaller screens. */
+    margin-top: 10px; /* Adds some space above the logo. */
+  }
+}
+
+/* @media (min-width: 320px) and (max-width: 365px) { 
+  .main-logo{
+   width: 150px;
+   font-size: 8px;
+   left: 10px;
+  } 
+} */
+
+
+ /* @media (max-width: 450px) { 
+  .main-logo {
+   max-width: 200px;
+   justify-content: center;
+  } 
+} */
+
 
 .logo {
     display: flex; /* Uses flexbox for layout. */
@@ -22,11 +70,103 @@
     display: grid; /* Uses flexbox for layout. */
     justify-content: baseline; /* Aligns logos to the start of the container. */
     gap: 5px; /* Space between the logos. */
-    
     grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
-    
-    
+ 
 }
+
+ @media (max-width: 450px) { 
+  .logo-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.go-back-image { /* Do not modify */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 150px;
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+  .go-back-image {
+    width: 70px;
+    padding-top: 5px;
+  }
+}
+
+
+/* @media (min-width: 320px) and (max-width: 365px) { 
+  .go-back-image{
+   width: 70px;
+   left: 8px;
+  } 
+}
+
+@media (min-width: 366px) and (max-width: 390px) { 
+  .go-back-image{
+   width: 30px !important;
+   left: 10px;
+  } 
+    
+} */
+
+.go-back-text {
+    position: absolute;
+    top: 6rem; 
+    right: 81rem; 
+    font-family: 'PokemonHollow';
+    font-size: 20px;
+    font-weight: bold;
+    color: #39559e;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 399px)  {
+  .go-back-text {
+    top: 4rem; 
+    right: 20rem; 
+    font-size: 9px;
+    line-height: 10px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 599px) { 
+  .go-back-text {
+    top: 4rem; 
+    right: 19rem; 
+    font-size: 11px;
+  }
+}
+
+
+
+/* @media (min-width: 320px) and (max-width: 365px) { 
+  .go-back-text {
+    width: 110px;
+    left: 8px;
+    font-size: 10px !important;
+    margin-top: 2px;
+    top: 70px !important;
+  } 
+}
+
+@media (max-width: 1280px) {
+    .go-back-text {
+        right: 65rem; 
+    }
+} */
+
+
+/* @media (max-width: 450px) { 
+  .go-back-text{
+   right: 150px; 
+   top: 6rem;
+   left: 10px;
+   font-size: 15px;
+   margin-bottom: 1px;
+   line-height: 10px;
+  } 
+} */
 
 .logo-name {
     font-family: cursive;
@@ -58,6 +198,17 @@
     font-weight: bold;
     font-size: 15px;
 }
+
+
+/* ======================= BASE SET STYLES ======================= */
+
+
+
+
+
+
+
+
 
 /* ======================= CARD THUMBNAIL STYLES ======================= */
 
