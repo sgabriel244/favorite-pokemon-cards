@@ -114,7 +114,7 @@
 .go-back-text {
     position: absolute;
     top: 6rem; 
-    right: 81rem; 
+    right: 80rem; 
     font-family: 'PokemonHollow';
     font-size: 20px;
     font-weight: bold;
@@ -169,10 +169,10 @@
 } */
 
 .logo-name {
-    font-family: cursive;
+    font-family: 'PokemonHollow';
     margin-bottom: 10px;
+    font-size: 17px;
     font-weight: bold;
-    font-size: 15px;
     margin: 14px;
     padding-bottom: 5px;
 }
@@ -199,6 +199,20 @@
     font-size: 15px;
 }
 
+.pack-image {
+    display: inline-block;
+    max-width: 12rem; /* Sets a maximum width for the logo. */
+    margin: auto;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 599px) { 
+  .pack-image {
+    display: inline-block;
+    max-width: 7rem; /* Adjusts the maximum width for smaller screens. */
+  }
+
+}
+
 
 /* ======================= BASE SET STYLES ======================= */
 
@@ -215,14 +229,14 @@
 /* Style for each individual card (image + text). */
 .card {
     text-align: center; /* Centers the text below the image. */
-    padding-bottom: 10px; /* Bottom padding for spacing. */
+    padding-bottom: 5px; /* Bottom padding for spacing. */
     padding-right: 15px; /* Right padding for the separator line. */
     padding-top: 20px; /* Top padding for spacing. */
     border-bottom: medium solid #000000; /* Medium, solid black separator line. */
     border-right: medium solid #000000; /* Medium, solid black separator line. */
     border-top: medium solid #000000; /* Medium, solid black separator line. */
     border-left: medium solid #000000; /* Medium, solid black separator line. */
-    margin-bottom: 10px; /* Space below each card. */
+    margin-bottom: 5px; /* Space below each card. */
 }
 
 /* Container that aligns the cards side by side. */
@@ -251,7 +265,7 @@
 
  @media (max-width: 950px) { 
   .cards-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, auto);
   }
 }
 
@@ -263,7 +277,6 @@
 
 /* Removes the separator line from the last card to avoid an extra line. */
 .card:last-child {
-    border-right: none; /* Removes the border. */
     padding-right: 0; /* Removes the extra padding. */
 }
 
@@ -313,10 +326,10 @@
 
 /* Style of the large image inside the lightbox. */
 .pokemon-card-content img {
-    max-width: 320px; /* Ensures the image does not exceed the screen width. */
+    max-width: 300px; /* Ensures the image does not exceed the screen width. */
     height: auto; /* Maintains the aspect ratio. */
     border-radius: 5px;/* Slightly rounded borders. */
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, .5); /* Shadow to give depth. */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .5); /* Shadow to give depth. */    
 }
 
 /* This rule applies the zoom to the image WHEN the lightbox is active (:target). */
@@ -390,4 +403,13 @@
         position: absolute;
         font-size: 5em;
     }
+}
+
+.under-construction {
+    display: flex;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: auto;
 }
