@@ -230,7 +230,7 @@
 .card {
     text-align: center; /* Centers the text below the image. */
     padding-bottom: 5px; /* Bottom padding for spacing. */
-    padding-right: 15px; /* Right padding for the separator line. */
+    padding-right: 5px; /* Right padding for the separator line. */
     padding-top: 20px; /* Top padding for spacing. */
     border-bottom: medium solid #000000; /* Medium, solid black separator line. */
     border-right: medium solid #000000; /* Medium, solid black separator line. */
@@ -240,12 +240,77 @@
 }
 
 /* Container that aligns the cards side by side. */
-.cards-container{
+.holo-rare-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .holo-rare-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .holo-rare-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Container that aligns the cards side by side. */
+.rare-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(2, auto); /* Creates 2 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 2px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+/* Container that aligns the cards side by side. */
+.uncommon-cards-container{
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 0; /* Space between the cards. */
+    gap: 4px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .uncommon-cards-container {
+    grid-template-columns: repeat(3, auto);
+    gap: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+  .uncommon-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Container that aligns the cards side by side. */
+.common-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(5, auto); /* Creates 6 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 4px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .common-cards-container {
+    grid-template-columns: repeat(3, auto);
+    gap: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+  .common-cards-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Style of the card thumbnail images. */
@@ -261,20 +326,7 @@
     transform: scale(1.15); /* Slightly increases the size. */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increases the shadow to give a "lifting" effect. */
 }
-
-
- @media (max-width: 950px) { 
-  .cards-container {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-
-@media (max-width: 650px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-}
-
+ 
 /* Removes the separator line from the last card to avoid an extra line. */
 .card:last-child {
     padding-right: 0; /* Removes the extra padding. */
@@ -334,32 +386,94 @@
 
 /* This rule applies the zoom to the image WHEN the lightbox is active (:target). */
 .pokemon-card-target:target .pokemon-card-content img {
-    transform: scale(1.25); /* Increases the image size by 1.25 times. */
+    transform: scale(1.50); /* Increases the image size by 1.25 times. */
     transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
 }
 
+@media (max-width: 950px) { 
+  .pokemon-card-target:target .pokemon-card-content img {
+    transform: scale(1.25); /* Increases the image size by 1.25 times. */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+  }
+}
 
-/* ======================= ESTILOS DAS SETAS DE NAVEGAÇÃO ======================= */
+@media (min-width: 320px) and (max-width: 650px) { 
+  .pokemon-card-target:target .pokemon-card-content img {
+    transform: scale(1.25); /* Increases the image size by 1.25 times. */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+  }
+}
 
-/* Estilo base para ambas as setas */
+
+/* ======================= POKÉMON TYPES AND WEAKNESSES COLOR ======================= */
+
+.fire-type {
+    color: red;
+}
+
+.water-type {
+    color: blue;
+}
+
+.grass-type {
+    color: green;
+}
+
+.psychic-type {
+    color: purple;
+}
+
+.electric-type {
+    color: yellow;
+}
+
+.colorless-type {
+    color: white;
+}
+
+.dark-type {
+    color: black;
+}
+
+.fighting-type {
+    color: maroon;
+}
+
+
+
+
+.rare-img, .uncommon-img {
+    width: 16px;
+    height: auto;
+}
+
+.common-img {
+    width: 15px;
+    height: 15px;
+}
+
+
+/* ======================= STYLES OF THE NAVIGATION ARROWS ======================= */
+
+/* Base style for both arrows */
 .lightbox-nav {
     position: absolute; /* Posição absoluta em relação ao container do lightbox */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralização vertical perfeita */
+    top: 50%; /* Vertically centralized */
+    transform: translateY(-50%); /* Thin adjustment for perfect vertical centralization */
     background: rgba(255, 255, 255, 0.7);
     color: black;
     text-decoration: none;
-    font-size: 3em; /* Tamanho do ícone da seta */
+    font-size: 3em; /* Arrow's size icon */
     padding: 0 15px;
     border-radius: 5px;
-    transition: background 0.3s; /* Transição suave ao passar o mouse */
+    transition: background 0.3s; /* Smooth transition hovering the mouse */
 }
 
 .lightbox-nav:hover {
-    background: rgba(255, 255, 255, 1); /* Fica totalmente opaco no hover */
+    background: rgba(255, 255, 255, 1); /* Stays totally opaque hovering the mouse */
 }
 
-/* Posiciona a seta "anterior" à esquerda */
+/* Sets the "previous" arrow to the left */
 .lightbox-prev {
     left: 400px;
 
@@ -370,7 +484,7 @@
     }
 }
 
-/* Posiciona a seta "próxima" à direita */
+/* Sets the "next" arrow to the right */
 .lightbox-next {
     right: 400px;
 
