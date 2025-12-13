@@ -177,9 +177,6 @@
     padding-bottom: 5px;
 }
 
-.set-symbol {
-    width: 20px;
-}
 
 .set-logo {
     max-width: 200px;
@@ -239,6 +236,8 @@
     margin-bottom: 5px; /* Space below each card. */
 }
 
+
+      /* HOLO RARE CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
 .holo-rare-cards-container{
     display: grid; /* Uses CSS Grid for layout. */
@@ -260,6 +259,93 @@
   }
 }
 
+
+      /* JUNGLE HOLO RARE CARDS CONTAINER */ 
+.jungle-holo-rare-cards-container {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .jungle-holo-rare-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .jungle-holo-rare-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+      /* JUNGLE RARE CARDS CONTAINER */ 
+.jungle-rare-cards-container {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .jungle-rare-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .jungle-rare-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+      /* JUNGLE UNCOMMON CARDS CONTAINER */ 
+.jungle-unc-cards-container {
+  display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .jungle-unc-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .jungle-unc-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+      /* JUNGLE COMMON CARDS CONTAINER */ 
+.jungle-comm-cards-container {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .jungle-comm-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .jungle-comm-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+      /* RARE CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
 .rare-cards-container{
     display: grid; /* Uses CSS Grid for layout. */
@@ -291,10 +377,12 @@
   }
 }
 
+
+      /* COMMON CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
 .common-cards-container{
     display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(5, auto); /* Creates 6 columns of equal width. */
+    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
     gap: 4px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
@@ -311,6 +399,11 @@
   .common-cards-container {
     grid-template-columns: 1fr;
   }
+}
+
+
+.pokemon-card {
+  scroll-margin-top: 100px;
 }
 
 /* Style of the card thumbnail images. */
@@ -439,17 +532,18 @@
     color: maroon;
 }
 
+/* ======================= SYMBOL AND RARITY STYLES ======================= */
 
-
-
-.rare-img, .uncommon-img {
+.rare-symbol, .uncommon-symbol {
     width: 16px;
-    height: auto;
 }
 
-.common-img {
+.common-symbol {
     width: 15px;
-    height: 15px;
+}
+
+.set-symbol {
+    width: 20px;
 }
 
 
