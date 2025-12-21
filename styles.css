@@ -190,15 +190,14 @@
 }
 
 .desc-card-p{
-    margin: 14px;
-    padding-bottom: 5px;
+    margin: 10px;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .pack-image {
     display: inline-block;
-    max-width: 12rem; /* Sets a maximum width for the logo. */
+    max-width: 12rem; /* Sets a maximum width for the pack image. */
     margin: auto;
 }
 
@@ -208,6 +207,14 @@
     max-width: 7rem; /* Adjusts the maximum width for smaller screens. */
   }
 
+}
+
+.artwork-image {
+    display: grid;
+    margin-left: auto; /* Centers the art horizontally. */
+    margin-right: auto; /* Centers the image horizontally. */
+    max-width: 20rem; /* Sets a maximum width for the artwork. */
+    height: auto; /* Maintains the aspect ratio of the artwork. */
 }
 
 
@@ -226,8 +233,8 @@
 /* Style for each individual card (image + text). */
 .card {
     text-align: center; /* Centers the text below the image. */
-    padding-bottom: 5px; /* Bottom padding for spacing. */
-    padding-right: 5px; /* Right padding for the separator line. */
+    padding-bottom: 10px; /* Bottom padding for spacing. */
+    padding-right: 10px; /* Right padding for the separator line. */
     padding-top: 20px; /* Top padding for spacing. */
     border-bottom: medium solid #000000; /* Medium, solid black separator line. */
     border-right: medium solid #000000; /* Medium, solid black separator line. */
@@ -236,6 +243,7 @@
     margin-bottom: 5px; /* Space below each card. */
 }
 
+  /* ======================= BASE SET CONTAINERS ======================= */
 
       /* HOLO RARE CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
@@ -259,11 +267,71 @@
   }
 }
 
+      /* RARE CARDS CONTAINER */ 
+/* Container that aligns the cards side by side. */
+.rare-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(2, auto); /* Creates 2 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 2px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+      /* UNCOMMON CARDS CONTAINER */ 
+/* Container that aligns the cards side by side. */
+.uncommon-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 4px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .uncommon-cards-container {
+    grid-template-columns: repeat(3, auto);
+    gap: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+  .uncommon-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+      /* COMMON CARDS CONTAINER */ 
+/* Container that aligns the cards side by side. */
+.common-cards-container{
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 4px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .common-cards-container {
+    grid-template-columns: repeat(3, auto);
+    gap: 2px;
+  }
+}
+
+@media (max-width: 650px) {
+  .common-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================= END BASE SET CONTAINERS ======================= */
+
+
+
+    /* ======================= JUNGLE SET CONTAINERS ======================= */
 
       /* JUNGLE HOLO RARE CARDS CONTAINER */ 
 .jungle-holo-rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
     gap: 1px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
@@ -280,7 +348,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 
       /* JUNGLE RARE CARDS CONTAINER */ 
 .jungle-rare-cards-container {
@@ -327,7 +394,7 @@
       /* JUNGLE COMMON CARDS CONTAINER */ 
 .jungle-comm-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
     gap: 1px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
@@ -344,62 +411,101 @@
     grid-template-columns: 1fr;
   }
 }
+/* ======================= END JUNGLE SET CONTAINERS ======================= */
 
-      /* RARE CARDS CONTAINER */ 
-/* Container that aligns the cards side by side. */
-.rare-cards-container{
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(2, auto); /* Creates 2 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 2px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
-}
 
-/* Container that aligns the cards side by side. */
-.uncommon-cards-container{
+    /* ======================= FOSSIL SET CONTAINERS ======================= */
+
+      /* FOSSIL HOLO RARE CARDS CONTAINER */ 
+.fossil-holo-rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(6, auto); /* Creates 6 columns of equal width. */
+    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 4px; /* Space between the cards. */
+    gap: 1px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
 @media (max-width: 950px) { 
-  .uncommon-cards-container {
+  .fossil-holo-rare-cards-container {
     grid-template-columns: repeat(3, auto);
-    gap: 2px;
   }
 }
 
 @media (max-width: 650px) {
-  .uncommon-cards-container {
+  .fossil-holo-rare-cards-container {
     grid-template-columns: 1fr;
   }
 }
 
 
-      /* COMMON CARDS CONTAINER */ 
-/* Container that aligns the cards side by side. */
-.common-cards-container{
+
+      /* FOSSIL RARE CARDS CONTAINER */ 
+.fossil-rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 4px; /* Space between the cards. */
+    gap: 1px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
 @media (max-width: 950px) { 
-  .common-cards-container {
+  .fossil-rare-cards-container {
     grid-template-columns: repeat(3, auto);
-    gap: 2px;
   }
 }
 
 @media (max-width: 650px) {
-  .common-cards-container {
+  .fossil-rare-cards-container {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+      /* FOSSIL UNCOMMON CARDS CONTAINER */ 
+.fossil-uncommon-cards-container {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .fossil-uncommon-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .fossil-uncommon-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+      /* FOSSIL COMMON CARDS CONTAINER */ 
+.fossil-common-cards-container {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 1px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
+
+@media (max-width: 950px) { 
+  .fossil-common-cards-container {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 650px) {
+  .fossil-common-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================= END FOSSIL SET CONTAINERS ======================= */
 
 
 .pokemon-card {
