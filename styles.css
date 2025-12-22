@@ -247,11 +247,11 @@
 
       /* HOLO RARE CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
-.holo-rare-cards-container{
+.holo-rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -269,21 +269,21 @@
 
       /* RARE CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
-.rare-cards-container{
+.rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(2, auto); /* Creates 2 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 2px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
       /* UNCOMMON CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
-.uncommon-cards-container{
+.uncommon-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 4px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -302,11 +302,11 @@
 
       /* COMMON CARDS CONTAINER */ 
 /* Container that aligns the cards side by side. */
-.common-cards-container{
+.common-cards-container, .cosmos-holo-rare-cards-container {
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 4px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -318,11 +318,19 @@
 }
 
 @media (max-width: 650px) {
-  .common-cards-container {
+  .common-cards-containe {
     grid-template-columns: 1fr;
   }
 }
 /* ======================= END BASE SET CONTAINERS ======================= */
+
+.cards-diff {
+    display: grid; /* Uses CSS Grid for layout. */
+    grid-template-columns: repeat(3, auto); /* Creates 2 columns of equal width. */
+    justify-content: center; /* Centers the cards in the container. */
+    gap: 5px; /* Space between the cards. */
+    background-color: silver; /* Background color of the container. */
+}
 
 
 
@@ -333,7 +341,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -354,7 +362,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -375,7 +383,7 @@
   display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -396,7 +404,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -421,7 +429,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -444,7 +452,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -467,7 +475,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -490,7 +498,7 @@
     display: grid; /* Uses CSS Grid for layout. */
     grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
     justify-content: center; /* Centers the cards in the container. */
-    gap: 1px; /* Space between the cards. */
+    gap: 5px; /* Space between the cards. */
     background-color: silver; /* Background color of the container. */
 }
 
@@ -551,14 +559,25 @@
     background: rgba(0, 0, 0, .7); /* Semi-transparent black background. */
     opacity: 0; /* Starts fully transparent. */
     z-index: 100; /* Stays in front of other elements. */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity. */
+ /* transition: 0.5s ease-in-out;  Smooth transition for opacity. */ /* I am conflicted about this transition. Do not delete, I might solve this later.  */ 
+    overflow: hidden; /* Hides any content that overflows. */
+    background-color: silver; /* Background color of the container. */
+}
+
+.pokemon-card-target-diff {
+    position: fixed; /* Fixed position relative to the browser window. */
+    top: -100%; /* Starts off-screen at the top. */
+    width: 100%; /* Occupies the full width. */
+    background: rgba(0, 0, 0, .7); /* Semi-transparent black background. */
+    opacity: 0; /* Starts fully transparent. */
+    z-index: 100; /* Stays in front of other elements. */
     overflow: hidden; /* Hides any content that overflows. */
     background-color: silver; /* Background color of the container. */
 }
 
 /* The "magic" of the lightbox happens here with the :target pseudo-class. */
 /* This rule is applied WHEN the element is the "target" of a link (e.g., #card-lightbox-1). */
-.pokemon-card-target:target {
+.pokemon-card-target:target, .pokemon-card-target-diff:target {
     opacity: 1; /* Makes the lightbox visible. */
     top: 0; /* Moves it to the visible position at the top of the screen. */
     bottom: 0;
@@ -567,7 +586,7 @@
 }
 
 /* Container for the content inside the lightbox (the large image). */
-.pokemon-card-content {
+.pokemon-card-content, .pokemon-card-content-diff {
     position: relative; /* Relative position for positioning child elements. */
     display: flex; /* Uses flexbox to facilitate centering. */
     justify-content: center; /* Centers horizontally. */
@@ -576,7 +595,7 @@
 }
 
 /* Style of the large image inside the lightbox. */
-.pokemon-card-content img {
+.pokemon-card-content img, .pokemon-card-content-diff img {
     max-width: 300px; /* Ensures the image does not exceed the screen width. */
     height: auto; /* Maintains the aspect ratio. */
     border-radius: 5px;/* Slightly rounded borders. */
@@ -584,8 +603,8 @@
 }
 
 /* This rule applies the zoom to the image WHEN the lightbox is active (:target). */
-.pokemon-card-target:target .pokemon-card-content img {
-    transform: scale(1.50); /* Increases the image size by 1.25 times. */
+.pokemon-card-target:target .pokemon-card-content img, .pokemon-card-content-diff img {
+    transform: scale(1.50); /* Increases the image size by 1.50 times. */
     transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
 }
 
@@ -657,7 +676,7 @@
 
 /* Base style for both arrows */
 .lightbox-nav {
-    position: absolute; /* Posição absoluta em relação ao container do lightbox */
+    position: absolute; /* Absolute position for the container of the lightbox */
     top: 50%; /* Vertically centralized */
     transform: translateY(-50%); /* Thin adjustment for perfect vertical centralization */
     background: rgba(255, 255, 255, 0.7);
