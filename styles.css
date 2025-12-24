@@ -84,7 +84,7 @@
     position: absolute;
     top: 0; 
     left: 0;
-    width: 150px;
+    width: 180px;
     padding-top: 10px;
 }
 
@@ -114,7 +114,7 @@
 .go-back-text {
     position: absolute;
     top: 6rem; 
-    right: 80rem; 
+    right: 78rem; 
     font-family: 'PokemonHollow';
     font-size: 20px;
     font-weight: bold;
