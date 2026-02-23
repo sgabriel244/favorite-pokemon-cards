@@ -1,186 +1,151 @@
-@font-face{
-    font-family: 'PokemonHollow';
-    src: url(../favorite-pokemon-cards/PokemonHollow.ttf);
+@font-face {
+  font-family: 'PokemonHollow';
+  src: url(../favorite-pokemon-cards/PokemonHollow.ttf);
 }
 
 @font-face {
-    font-family: 'PokemonSolid';
-    src: url(../favorite-pokemon-cards/PokemonSolid.ttf);
+  font-family: 'PokemonSolid';
+  src: url(../favorite-pokemon-cards/PokemonSolid.ttf);
 }
 
 .h1 {
   text-align: center;
   font-family: 'PokemonHollow';
-  color: rgb(57,85,158);
+  color: rgb(57, 85, 158);
   font-size: 3rem;
   font-weight: bold;
   line-height: 80px;
 }
 
 .main-logo {
-    display: grid;
-    margin-left: auto; /* Centers the image horizontally. */
-    margin-right: auto; /* Centers the image horizontally. */
-    max-width: 18rem; /* Sets a maximum width for the logo. */
-    height: auto; /* Maintains the aspect ratio of the image. */
-    margin-top: auto; /* Adds some space above the logo. */
+  display: grid;
+  margin-left: auto;
+  /* Centers the image horizontally. */
+  margin-right: auto;
+  /* Centers the image horizontally. */
+  max-width: 18rem;
+  /* Sets a maximum width for the logo. */
+  height: auto;
+  /* Maintains the aspect ratio of the image. */
+  margin-top: auto;
+  /* Adds some space above the logo. */
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .main-logo {
-    max-width: 150px; /* Adjusts the maximum width for smaller screens. */
-    margin-top: 10px; /* Adds some space above the logo. */
+    max-width: 150px;
+    /* Adjusts the maximum width for smaller screens. */
+    margin-top: 10px;
+    /* Adds some space above the logo. */
   }
 }
 
-/* @media (min-width: 320px) and (max-width: 365px) { 
-  .main-logo{
-   width: 150px;
-   font-size: 8px;
-   left: 10px;
-  } 
-} */
-
-
- /* @media (max-width: 450px) { 
-  .main-logo {
-   max-width: 200px;
-   justify-content: center;
-  } 
-} */
-
 
 .logo {
-    display: flex; /* Uses flexbox for layout. */
-    flex-direction: column; /* Stacks items vertically. */
-    justify-content: space-between; /* Evenly spaces items vertically. */
-    align-items: center; /* Centers items horizontally. */
-    text-align: center; /* Centers the text below the logo. */
-    padding-bottom: 5px; /* Bottom padding for spacing. */
-    padding-right: 10px; /* Right padding for the separator line. */
-    padding-top: 10px; /* Top padding for spacing. */
-    border-bottom: medium solid #000000; /* Medium, solid black separator line. */
-    border-right: medium solid #000000; /* Medium, solid black separator line. */
-    border-top: medium solid #000000; /* Medium, solid black separator line. */
-    border-left: medium solid #000000; /* Medium, solid black separator line. */
-    margin-bottom: 10px; /* Space below each logo. */
+  display: flex;
+  /* Uses flexbox for layout. */
+  flex-direction: column;
+  /* Stacks items vertically. */
+  justify-content: space-between;
+  /* Evenly spaces items vertically. */
+  align-items: center;
+  /* Centers items horizontally. */
+  text-align: center;
+  /* Centers the text below the logo. */
+  padding-bottom: 5px;
+  /* Bottom padding for spacing. */
+  padding-right: 10px;
+  /* Right padding for the separator line. */
+  padding-top: 10px;
+  /* Top padding for spacing. */
+  border-bottom: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-right: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-top: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-left: medium solid #000000;
+  /* Medium, solid black separator line. */
+  margin-bottom: 10px;
+  /* Space below each logo. */
 }
 
 .logo-container {
-    display: grid; /* Uses flexbox for layout. */
-    justify-content: baseline; /* Aligns logos to the start of the container. */
-    gap: 5px; /* Space between the logos. */
-    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
- 
+  display: grid;
+  /* Uses flexbox for layout. */
+  justify-content: baseline;
+  /* Aligns logos to the start of the container. */
+  gap: 5px;
+  /* Space between the logos. */
+  grid-template-columns: repeat(4, auto);
+  /* Creates 4 columns of equal width. */
+
 }
 
- @media (max-width: 450px) { 
+@media (max-width: 450px) {
   .logo-container {
     grid-template-columns: 1fr;
   }
 }
 
-.go-back-image { /* Do not modify */
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 180px;
-    padding-top: 10px;
+.go-back-image {
+  /* Do not modify */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  padding-top: 10px;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 767px)  {
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .go-back-image {
     width: 70px;
     padding-top: 5px;
   }
 }
 
-
-/* @media (min-width: 320px) and (max-width: 365px) { 
-  .go-back-image{
-   width: 70px;
-   left: 8px;
-  } 
-}
-
-@media (min-width: 366px) and (max-width: 390px) { 
-  .go-back-image{
-   width: 30px !important;
-   left: 10px;
-  } 
-    
-} */
-
 .go-back-text {
-    position: absolute;
-    top: 6rem; 
-    right: 78rem; 
-    font-family: 'PokemonHollow';
-    font-size: 20px;
-    font-weight: bold;
-    color: #39559e;
+  position: absolute;
+  top: 6rem;
+  right: 78rem;
+  font-family: 'PokemonHollow';
+  font-size: 20px;
+  font-weight: bold;
+  color: #39559e;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 399px)  {
+@media only screen and (min-width: 200px) and (max-width: 399px) {
   .go-back-text {
-    top: 4rem; 
-    right: 20rem; 
+    top: 4rem;
+    right: 20rem;
     font-size: 9px;
     line-height: 10px;
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 599px) { 
+@media only screen and (min-width: 400px) and (max-width: 599px) {
   .go-back-text {
-    top: 4rem; 
-    right: 19rem; 
+    top: 4rem;
+    right: 19rem;
     font-size: 11px;
   }
 }
 
 
 
-/* @media (min-width: 320px) and (max-width: 365px) { 
-  .go-back-text {
-    width: 110px;
-    left: 8px;
-    font-size: 10px !important;
-    margin-top: 2px;
-    top: 70px !important;
-  } 
-}
-
-@media (max-width: 1280px) {
-    .go-back-text {
-        right: 65rem; 
-    }
-} */
-
-
-/* @media (max-width: 450px) { 
-  .go-back-text{
-   right: 150px; 
-   top: 6rem;
-   left: 10px;
-   font-size: 15px;
-   margin-bottom: 1px;
-   line-height: 10px;
-  } 
-} */
-
 .logo-name {
-    font-family: 'PokemonHollow';
-    margin-bottom: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    margin: 14px;
-    padding-bottom: 5px;
+  font-family: 'PokemonHollow';
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 14px;
+  padding-bottom: 5px;
 }
 
 
 .set-logo {
-    max-width: 200px;
-    justify-content: center;
+  max-width: 200px;
+  justify-content: center;
 
 }
 
@@ -189,32 +154,38 @@
   text-align: center;
 }
 
-.desc-card-p{
-    margin: 10px;
-    font-weight: bold;
-    font-size: 10px;
+.desc-card-p {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 10px;
 }
 
 .pack-image {
-    display: inline-block;
-    max-width: 12rem; /* Sets a maximum width for the pack image. */
-    margin: auto;
+  display: inline-block;
+  max-width: 12rem;
+  /* Sets a maximum width for the pack image. */
+  margin-top: 10vw;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 599px) { 
+@media only screen and (min-width: 200px) and (max-width: 599px) {
   .pack-image {
     display: inline-block;
-    max-width: 7rem; /* Adjusts the maximum width for smaller screens. */
+    max-width: 7rem;
+    /* Adjusts the maximum width for smaller screens. */
   }
 
 }
 
 .artwork-image {
-    display: grid;
-    margin-left: auto; /* Centers the art horizontally. */
-    margin-right: auto; /* Centers the image horizontally. */
-    max-width: 20rem; /* Sets a maximum width for the artwork. */
-    height: auto; /* Maintains the aspect ratio of the artwork. */
+  display: grid;
+  margin-left: auto;
+  /* Centers the art horizontally. */
+  margin-right: auto;
+  /* Centers the image horizontally. */
+  max-width: 20rem;
+  /* Sets a maximum width for the artwork. */
+  height: auto;
+  /* Maintains the aspect ratio of the artwork. */
 }
 
 
@@ -232,30 +203,44 @@
 
 /* Style for each individual card (image + text). */
 .card {
-    text-align: center; /* Centers the text below the image. */
-    padding-bottom: 10px; /* Bottom padding for spacing. */
-    padding-right: 10px; /* Right padding for the separator line. */
-    padding-top: 20px; /* Top padding for spacing. */
-    border-bottom: medium solid #000000; /* Medium, solid black separator line. */
-    border-right: medium solid #000000; /* Medium, solid black separator line. */
-    border-top: medium solid #000000; /* Medium, solid black separator line. */
-    border-left: medium solid #000000; /* Medium, solid black separator line. */
-    margin-bottom: 5px; /* Space below each card. */
+  text-align: center;
+  /* Centers the text below the image. */
+  padding-bottom: 10px;
+  /* Bottom padding for spacing. */
+  padding-right: 10px;
+  /* Right padding for the separator line. */
+  padding-top: 20px;
+  /* Top padding for spacing. */
+  border-bottom: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-right: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-top: medium solid #000000;
+  /* Medium, solid black separator line. */
+  border-left: medium solid #000000;
+  /* Medium, solid black separator line. */
+  margin-bottom: 5px;
+  /* Space below each card. */
 }
 
-  /* ======================= BASE SET CONTAINERS ======================= */
+/* ======================= BASE SET CONTAINERS ======================= */
 
-      /* HOLO RARE CARDS CONTAINER */ 
+/* HOLO RARE CARDS CONTAINER */
 /* Container that aligns the cards side by side. */
 .holo-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(4, auto);
+  /* Creates 4 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .holo-rare-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -267,27 +252,37 @@
   }
 }
 
-      /* RARE CARDS CONTAINER */ 
+/* RARE CARDS CONTAINER */
 /* Container that aligns the cards side by side. */
 .rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(2, auto); /* Creates 2 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(2, auto);
+  /* Creates 2 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-      /* UNCOMMON CARDS CONTAINER */ 
+/* UNCOMMON CARDS CONTAINER */
 /* Container that aligns the cards side by side. */
 .uncommon-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(4, auto);
+  /* Creates 4 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .uncommon-cards-container {
     grid-template-columns: repeat(3, auto);
     gap: 2px;
@@ -300,17 +295,23 @@
   }
 }
 
-      /* COMMON CARDS CONTAINER */ 
+/* COMMON CARDS CONTAINER */
 /* Container that aligns the cards side by side. */
-.common-cards-container, .cosmos-holo-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+.common-cards-container,
+.cosmos-holo-rare-cards-container {
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(5, auto);
+  /* Creates 5 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .common-cards-container {
     grid-template-columns: repeat(3, auto);
     gap: 2px;
@@ -322,30 +323,41 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* ======================= END BASE SET CONTAINERS ======================= */
 
 .cards-diff {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 2 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 2 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
 
 
-    /* ======================= JUNGLE SET CONTAINERS ======================= */
+/* ======================= JUNGLE SET CONTAINERS ======================= */
 
-      /* JUNGLE HOLO RARE CARDS CONTAINER */ 
+/* JUNGLE HOLO RARE CARDS CONTAINER */
 .jungle-holo-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 3 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .jungle-holo-rare-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -357,16 +369,21 @@
   }
 }
 
-      /* JUNGLE RARE CARDS CONTAINER */ 
+/* JUNGLE RARE CARDS CONTAINER */
 .jungle-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 3 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .jungle-rare-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -378,16 +395,21 @@
   }
 }
 
-      /* JUNGLE UNCOMMON CARDS CONTAINER */ 
+/* JUNGLE UNCOMMON CARDS CONTAINER */
 .jungle-unc-cards-container {
-  display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(5, auto);
+  /* Creates 5 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .jungle-unc-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -399,16 +421,21 @@
   }
 }
 
-      /* JUNGLE COMMON CARDS CONTAINER */ 
+/* JUNGLE COMMON CARDS CONTAINER */
 .jungle-comm-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 3 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .jungle-comm-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -419,21 +446,27 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* ======================= END JUNGLE SET CONTAINERS ======================= */
 
 
-    /* ======================= FOSSIL SET CONTAINERS ======================= */
+/* ======================= FOSSIL SET CONTAINERS ======================= */
 
-      /* FOSSIL HOLO RARE CARDS CONTAINER */ 
+/* FOSSIL HOLO RARE CARDS CONTAINER */
 .fossil-holo-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 3 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .fossil-holo-rare-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -447,16 +480,21 @@
 
 
 
-      /* FOSSIL RARE CARDS CONTAINER */ 
+/* FOSSIL RARE CARDS CONTAINER */
 .fossil-rare-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(5, auto); /* Creates 5 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(5, auto);
+  /* Creates 5 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .fossil-rare-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -470,16 +508,21 @@
 
 
 
-      /* FOSSIL UNCOMMON CARDS CONTAINER */ 
+/* FOSSIL UNCOMMON CARDS CONTAINER */
 .fossil-uncommon-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(3, auto);
+  /* Creates 3 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .fossil-uncommon-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -493,16 +536,21 @@
 
 
 
-      /* FOSSIL COMMON CARDS CONTAINER */ 
+/* FOSSIL COMMON CARDS CONTAINER */
 .fossil-common-cards-container {
-    display: grid; /* Uses CSS Grid for layout. */
-    grid-template-columns: repeat(4, auto); /* Creates 4 columns of equal width. */
-    justify-content: center; /* Centers the cards in the container. */
-    gap: 5px; /* Space between the cards. */
-    background-color: silver; /* Background color of the container. */
+  display: grid;
+  /* Uses CSS Grid for layout. */
+  grid-template-columns: repeat(4, auto);
+  /* Creates 4 columns of equal width. */
+  justify-content: center;
+  /* Centers the cards in the container. */
+  gap: 5px;
+  /* Space between the cards. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .fossil-common-cards-container {
     grid-template-columns: repeat(3, auto);
   }
@@ -513,6 +561,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 /* ======================= END FOSSIL SET CONTAINERS ======================= */
 
 
@@ -522,29 +571,35 @@
 
 /* Style of the card thumbnail images. */
 .pokemon-card img {
-    max-width: 120px; /* Maximum width of the thumbnail. */
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow. */
-    transition: transform 0.2s, box-shadow 0.2s; /* Transition for the hover effect. */
+  max-width: 120px;
+  /* Maximum width of the thumbnail. */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  /* Subtle shadow. */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Transition for the hover effect. */
 }
 
 /* Effect when hovering over the thumbnail. */
 .pokemon-card:hover img {
-    transform: scale(1.15); /* Slightly increases the size. */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Increases the shadow to give a "lifting" effect. */
+  transform: scale(1.15);
+  /* Slightly increases the size. */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  /* Increases the shadow to give a "lifting" effect. */
 }
- 
+
 /* Removes the separator line from the last card to avoid an extra line. */
 .card:last-child {
-    padding-right: 0; /* Removes the extra padding. */
+  padding-right: 0;
+  /* Removes the extra padding. */
 }
 
 /* Style of the paragraph text below each card. */
 .card p {
-    font-family: 'Arial', sans-serif;
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #333;
 }
 
 
@@ -553,72 +608,111 @@
 
 /* Defines the style of the lightbox container. */
 .pokemon-card-target {
-    position: fixed; /* Fixed position relative to the browser window. */
-    top: -100%; /* Starts off-screen at the top. */
-    width: 100%; /* Occupies the full width. */
-    background: rgba(0, 0, 0, .7); /* Semi-transparent black background. */
-    opacity: 0; /* Starts fully transparent. */
-    z-index: 100; /* Stays in front of other elements. */
- /* transition: 0.5s ease-in-out;  Smooth transition for opacity. */ /* I am conflicted about this transition. Do not delete, I might solve this later.  */ 
-    overflow: hidden; /* Hides any content that overflows. */
-    background-color: silver; /* Background color of the container. */
+  position: fixed;
+  /* Fixed position relative to the browser window. */
+  top: -100%;
+  /* Starts off-screen at the top. */
+  width: 100%;
+  /* Occupies the full width. */
+  background: rgba(0, 0, 0, .7);
+  /* Semi-transparent black background. */
+  opacity: 0;
+  /* Starts fully transparent. */
+  z-index: 100;
+  /* Stays in front of other elements. */
+  /* transition: 0.5s ease-in-out;  Smooth transition for opacity. */
+  /* I am conflicted about this transition. Do not delete, I might solve this later.  */
+  overflow: hidden;
+  /* Hides any content that overflows. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
 .pokemon-card-target-diff {
-    position: fixed; /* Fixed position relative to the browser window. */
-    top: -100%; /* Starts off-screen at the top. */
-    width: 100%; /* Occupies the full width. */
-    background: rgba(0, 0, 0, .7); /* Semi-transparent black background. */
-    opacity: 0; /* Starts fully transparent. */
-    z-index: 100; /* Stays in front of other elements. */
-    overflow: hidden; /* Hides any content that overflows. */
-    background-color: silver; /* Background color of the container. */
+  position: fixed;
+  /* Fixed position relative to the browser window. */
+  top: -100%;
+  /* Starts off-screen at the top. */
+  width: 100%;
+  /* Occupies the full width. */
+  background: rgba(0, 0, 0, .7);
+  /* Semi-transparent black background. */
+  opacity: 0;
+  /* Starts fully transparent. */
+  z-index: 100;
+  /* Stays in front of other elements. */
+  overflow: hidden;
+  /* Hides any content that overflows. */
+  background-color: silver;
+  /* Background color of the container. */
 }
 
 /* The "magic" of the lightbox happens here with the :target pseudo-class. */
 /* This rule is applied WHEN the element is the "target" of a link (e.g., #card-lightbox-1). */
-.pokemon-card-target:target, .pokemon-card-target-diff:target {
-    opacity: 1; /* Makes the lightbox visible. */
-    top: 0; /* Moves it to the visible position at the top of the screen. */
-    bottom: 0;
-    left: 0;
-    right: 0; /* Occupies the entire screen. */
+.pokemon-card-target:target,
+.pokemon-card-target-diff:target {
+  opacity: 1;
+  /* Makes the lightbox visible. */
+  top: 0;
+  /* Moves it to the visible position at the top of the screen. */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Occupies the entire screen. */
 }
 
 /* Container for the content inside the lightbox (the large image). */
-.pokemon-card-content, .pokemon-card-content-diff {
-    position: relative; /* Relative position for positioning child elements. */
-    display: flex; /* Uses flexbox to facilitate centering. */
-    justify-content: center; /* Centers horizontally. */
-    align-items: center;  /* Centers vertically. */
-    height: 100%; /* Occupies the full height of the lightbox. */
+.pokemon-card-content,
+.pokemon-card-content-diff {
+  position: relative;
+  /* Relative position for positioning child elements. */
+  display: flex;
+  /* Uses flexbox to facilitate centering. */
+  justify-content: center;
+  /* Centers horizontally. */
+  align-items: center;
+  /* Centers vertically. */
+  height: 100%;
+  /* Occupies the full height of the lightbox. */
 }
 
 /* Style of the large image inside the lightbox. */
-.pokemon-card-content img, .pokemon-card-content-diff img {
-    max-width: 300px; /* Ensures the image does not exceed the screen width. */
-    height: auto; /* Maintains the aspect ratio. */
-    border-radius: 5px;/* Slightly rounded borders. */
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, .5); /* Shadow to give depth. */    
+.pokemon-card-content img,
+.pokemon-card-content-diff img {
+  max-width: 300px;
+  /* Ensures the image does not exceed the screen width. */
+  height: auto;
+  /* Maintains the aspect ratio. */
+  border-radius: 5px;
+  /* Slightly rounded borders. */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, .5);
+  /* Shadow to give depth. */
 }
 
 /* This rule applies the zoom to the image WHEN the lightbox is active (:target). */
-.pokemon-card-target:target .pokemon-card-content img, .pokemon-card-content-diff img {
-    transform: scale(1.50); /* Increases the image size by 1.50 times. */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+.pokemon-card-target:target .pokemon-card-content img,
+.pokemon-card-content-diff img {
+  transform: scale(1.50);
+  /* Increases the image size by 1.50 times. */
+  transition: transform 0.5s ease-in-out;
+  /* Smooth transition for the zoom effect. */
 }
 
-@media (max-width: 950px) { 
+@media (max-width: 950px) {
   .pokemon-card-target:target .pokemon-card-content img {
-    transform: scale(1.25); /* Increases the image size by 1.25 times. */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+    transform: scale(1.25);
+    /* Increases the image size by 1.25 times. */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition for the zoom effect. */
   }
 }
 
-@media (min-width: 320px) and (max-width: 650px) { 
+@media (min-width: 320px) and (max-width: 650px) {
   .pokemon-card-target:target .pokemon-card-content img {
-    transform: scale(1.25); /* Increases the image size by 1.25 times. */
-    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect. */
+    transform: scale(1.25);
+    /* Increases the image size by 1.25 times. */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth transition for the zoom effect. */
   }
 }
 
@@ -626,49 +720,50 @@
 /* ======================= POKÉMON TYPES AND WEAKNESSES COLOR ======================= */
 
 .fire-type {
-    color: red;
+  color: red;
 }
 
 .water-type {
-    color: blue;
+  color: blue;
 }
 
 .grass-type {
-    color: green;
+  color: green;
 }
 
 .psychic-type {
-    color: purple;
+  color: purple;
 }
 
 .electric-type {
-    color: yellow;
+  color: yellow;
 }
 
 .colorless-type {
-    color: white;
+  color: white;
 }
 
 .dark-type {
-    color: black;
+  color: black;
 }
 
 .fighting-type {
-    color: maroon;
+  color: maroon;
 }
 
 /* ======================= SYMBOL AND RARITY STYLES ======================= */
 
-.rare-symbol, .uncommon-symbol {
-    width: 16px;
+.rare-symbol,
+.uncommon-symbol {
+  width: 16px;
 }
 
 .common-symbol {
-    width: 15px;
+  width: 15px;
 }
 
 .set-symbol {
-    width: 20px;
+  width: 20px;
 }
 
 
@@ -676,73 +771,269 @@
 
 /* Base style for both arrows */
 .lightbox-nav {
-    position: absolute; /* Absolute position for the container of the lightbox */
-    top: 50%; /* Vertically centralized */
-    transform: translateY(-50%); /* Thin adjustment for perfect vertical centralization */
-    background: rgba(255, 255, 255, 0.7);
-    color: black;
-    text-decoration: none;
-    font-size: 3em; /* Arrow's size icon */
-    padding: 0 15px;
-    border-radius: 5px;
-    transition: background 0.3s; /* Smooth transition hovering the mouse */
+  position: absolute;
+  /* Absolute position for the container of the lightbox */
+  top: 50%;
+  /* Vertically centralized */
+  transform: translateY(-50%);
+  /* Thin adjustment for perfect vertical centralization */
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  text-decoration: none;
+  font-size: 3em;
+  /* Arrow's size icon */
+  padding: 0 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  /* Smooth transition hovering the mouse */
 }
 
 .lightbox-nav:hover {
-    background: rgba(255, 255, 255, 1); /* Stays totally opaque hovering the mouse */
+  background: rgba(255, 255, 255, 1);
+  /* Stays totally opaque hovering the mouse */
 }
 
 /* Sets the "previous" arrow to the left */
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 2.2rem;
+  padding: 6px 12px;
+
+  cursor: pointer;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lightbox-prev {
-    left: 400px;
-
-    @media screen and (max-width: 700px) { 
-        display: flex;
-        left: 30px;
-        top: 50px;
-    }
+  left: 12px;
 }
 
-/* Sets the "next" arrow to the right */
 .lightbox-next {
-    right: 400px;
-
-    @media screen and (max-width: 700px) { 
-        display: flex;
-        right: 30px;
-        top: 50px;
-        
-    }
+  right: 12px;
 }
 
-.lightbox-close { /* Style of the close button (the "X"). */
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: white;
-    color: black;
-    text-decoration: none; /* Removes the link underline. */
-    position: absolute; /* Absolute position relative to the lightbox. */
-    top: 35px; /* Size of the "X". */
-    right: 400px;
-    font-size: 3em; 
-    text-align: center; /* Centers the "X" vertically. */
-    line-height: 50px; 
-    border-radius: 50%; /* Makes the button round. */
 
-    @media screen and (max-width: 700px) { 
-        display: flex;
-        left: 165px;
-        position: absolute;
-        font-size: 5em;
-    }
+
+.lightbox-close {
+  /* Style of the close button (the "X"). */
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  /* Removes the link underline. */
+  position: absolute;
+  /* Absolute position relative to the lightbox. */
+  top: 35px;
+  /* Size of the "X". */
+  right: 50px;
+  font-size: 3em;
+  text-align: center;
+  /* Centers the "X" vertically. */
+  line-height: 50px;
+  border-radius: 50%;
+  /* Makes the button round. */
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    left: 165px;
+    position: absolute;
+    font-size: 5em;
+  }
 }
 
 .under-construction {
+  display: flex;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+/* ======================= MOBILE ONLY – Pokémon TCG - Applies up to 768px ======================= */
+@media (max-width: 768px) {
+
+  /* ======================= GLOBAL ======================= */
+  body {
+    font-size: 14px;
+    background: #f2f2f2;
+  }
+
+  /* ======================= HEADERS & TEXT ======================= */
+  .h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    padding: 10px;
+  }
+
+  .original-p {
+    font-size: 1rem;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  /* ======================= SETS LOGOS ======================= */
+  .logo-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .logo {
+    padding: 12px;
+    border-width: 2px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+
+  .logo-name {
+    font-size: .9rem;
+  }
+
+  /* ======================= CARDS – ONE PER ROW ======================= */
+  .holo-rare-cards-container,
+  .rare-cards-container,
+  .uncommon-cards-container,
+  .common-cards-container,
+  .cosmos-holo-rare-cards-container,
+  .cards-diff,
+
+  .jungle-holo-rare-cards-container,
+  .jungle-rare-cards-container,
+  .jungle-unc-cards-container,
+  .jungle-comm-cards-container,
+
+  .fossil-holo-rare-cards-container,
+  .fossil-rare-cards-container,
+  .fossil-uncommon-cards-container,
+  .fossil-common-cards-container {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  /* ======================= CARD ======================= */
+  .card {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 12px;
+    border-width: 2px;
+  }
+
+  .card p {
+    font-size: .95rem;
+  }
+
+  /* ======================= CARD IMAGE ======================= */
+  .pokemon-card img {
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
+  }
+
+  .pokemon-card:hover img {
+    transform: none;
+    /* disables hover zoom on mobile */
+  }
+
+  /* ======================= LIGHTBOX ======================= */
+  .pokemon-card-target, .pokemon-card-target-diff {
+    background: rgba(0, 0, 0, .85);
+  }
+
+  .pokemon-card-content, .pokemon-card-content-diff {
+    padding: 15px;
+  }
+
+  .pokemon-card-content img, .pokemon-card-content-diff img {
+    max-width: 85%;
+    transform: none !important;
+  }
+
+  /* ======================= LIGHTBOX CONTROLS ======================= */
+  .lightbox-prev, .lightbox-next {
+    font-size: 2.2rem;
+    padding: 5px 10px;
+    top: 50%;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+.lightbox-close {
+      position: absolute;
+      top: 80px;
+      right: 12px;
+
+      width: 60px;
+      height: 60px;
+      border-radius: 80%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.4rem;
+      line-height: 1;
+
+      cursor: pointer;
+      z-index: 10;
+  }
+.lightbox-close:hover {
+    transform: scale(1.05);
+}
+
+  /* ======================= SYMBOLS ======================= */
+  .set-symbol {
+    width: 16px;
+  }
+
+  .rare-symbol,
+  .uncommon-symbol {
+    width: 14px;
+  }
+
+  .common-symbol {
+    width: 13px;
+  }
+
+  /* ======================= UNDER CONSTRUCTION IMAGE ======================= */
+  .under-construction {
+    max-width: 280px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .go-back-text {
+    right: auto;
+    position: auto;
+    /* Remove posicionamento absoluto */
     display: flex;
-    width: 500px;
-    margin-top: 50px;
-    margin-left: auto; 
-    margin-right: auto;
-    margin-bottom: auto;
+    margin-top: 5px;
+    /* Espaço entre Pikachu e texto */
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1;
+  }
+
 }
